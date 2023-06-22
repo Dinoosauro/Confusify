@@ -1,0 +1,77 @@
+body {
+    padding: 15px;
+    background-color: rgb(22, 22, 22);
+    color: rgb(240, 240, 240);
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    margin-bottom: 0px;
+}
+
+button {
+    height: 35px;
+    background-color: #005595;
+    border-color: #005595;
+    color: rgb(240, 240, 240);
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #0098dd;
+    border-color: #0098dd;
+    cursor: pointer;
+}
+
+input[type=text] {
+    background-color: rgb(51, 51, 51);
+    color: rgb(240, 240, 240);
+    height: 25px;
+    margin-left: 15px;
+    border-radius: 8px;
+}
+
+input[type=checkbox] {
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+#options:hover {
+    cursor: pointer;
+}
+
+#options {
+    z-index: 2;
+}
+dialog {
+    border-radius: 8px;
+    background-color: rgb(51, 51, 51);
+    color: rgb(240, 240, 240);
+    position: absolute;
+    top: 25px;
+}
+.result {
+    background-color: rgb(51, 51, 51);
+    border-radius: 8px;
+    max-width: 55vw;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.secondbutton {
+    background-color: rgb(65, 65, 65);
+    border-color: rgb(65, 65, 65);
+    margin-left: 20px;
+}
+.secondbutton:hover {
+    background-color: rgb(95,95,95);
+    border-color: rgb(95,95,95);
+}
+.footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100vw;
+    text-align: center;
+
+}

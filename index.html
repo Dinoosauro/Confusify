@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://dinoosauro.github.io/Confusify/style.css">
+</head>
+
+<body>
+    <h1 style="margin-top: 0px">Confusify</h1><br><br>
+    <i>Replace the normal text of a phrase with some strange, but (sometimes) readable symbols</i> <br><br>
+    <l>Write here the text:</l><input type="text" id="text" oninput="applyLabel()"><br><br>
+    <div class="result">
+        <div>
+            <l id="label">The text will appear here...</l><br><br>
+            <l id="possible"><span id="combination"></span> Combinations (aproximately)</l> <br><br><button onclick="applyLabel()">Generate another one!</button><button class="secondbutton" onclick="copy()">Copy text</button>    
+        </div>
+</div>
+<div class="footer">
+    <l>Confusify Web<br>Please don't use this tool for spam or other dangerous activities.<br><br><a style="margin-right: 10%;" href="https://github.com/Dinoosauro/Confusify">View on GitHub</a><a href="https://dinoosauro.github.io/Confusify/createList.html">Create your JSON list</a></l>
+</div>
+    <img id="options"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY5MjggMi4zMTE0M0MxNS44MTI4IDIuMTE0NzggMTQuOTE0NyAyLjAxMDQxIDE0LjAxMzEgMkMxMy4wODkxIDIuMDEwNjUgMTIuMTkgMi4xMTQ5OCAxMS4zMDg5IDIuMzExMzFDMTAuOTI0NSAyLjM5Njk3IDEwLjYzNyAyLjcxNzk3IDEwLjU5MzMgMy4xMTAxMUwxMC4zODQ0IDQuOTg3ODdDMTAuMzI0NCA1LjUyNTIxIDEwLjAxMzMgNi4wMDI1OCA5LjU0NjE3IDYuMjc0MDlDOS4wNzY5NiA2LjU0ODc1IDguNTA3OTMgNi41ODE2MiA4LjAxMjk2IDYuMzYzOThMNi4yOTI3NiA1LjYwNjg1QzUuOTM0OTIgNS40NDkzNSA1LjUxNjg0IDUuNTM1MjIgNS4yNDk3MSA1LjgyMTA4QzQuMDA2MzcgNy4xNTE1NyAzLjA4MDM4IDguNzQ3MjggMi41NDE0MiAxMC40ODgxQzIuNDI1MTMgMTAuODYzOCAyLjU1OTE0IDExLjI3MiAyLjg3NTI5IDExLjUwNTFMNC40MDE2MiAxMi42MzA1QzQuODM3MjEgMTIuOTUxMiA1LjA5NDE0IDEzLjQ1OTcgNS4wOTQxNCAxNC4wMDA2QzUuMDk0MTQgMTQuNTQxNSA0LjgzNzIxIDE1LjA1IDQuNDAyMTkgMTUuMzcwM0wyLjg3NDkgMTYuNDk3NkMyLjU1OTIyIDE2LjczMDcgMi40MjUzMyAxNy4xMzgzIDIuNTQxMjIgMTcuNTEzNkMzLjA3OTI0IDE5LjI1NjEgNC4wMDQ3NCAyMC44NTM2IDUuMjQ4MDYgMjIuMTg1OEM1LjUxNDkzIDIyLjQ3MTggNS45MzI4MSAyMi41NTggNi4yOTA3MSAyMi40MDA5TDguMDE4NTkgMjEuNjQyNEM4LjUxMTE3IDIxLjQyNjkgOS4wNzc4MyAyMS40NTg1IDkuNTQ0NTIgMjEuNzI4QzEwLjAxMTIgMjEuOTk3NiAxMC4zMjI1IDIyLjQ3MyAxMC4zODM0IDIzLjAwOTNMMTAuNTkwOCAyNC44ODU1QzEwLjYzMzYgMjUuMjcyOSAxMC45MTQ4IDI1LjU5MTcgMTEuMjkzMyAyNS42ODE5QzEzLjA3MjUgMjYuMTA2IDE0LjkyNjMgMjYuMTA2IDE2LjcwNTUgMjUuNjgxOUMxNy4wODQgMjUuNTkxNyAxNy4zNjUxIDI1LjI3MjkgMTcuNDA4IDI0Ljg4NTVMMTcuNjE1NyAyMy4wMDY1QzE3LjY3NSAyMi40NjkyIDE3Ljk4NTggMjEuOTkyMyAxOC40NTI5IDIxLjcyMTlDMTguOTIgMjEuNDUxNCAxOS40ODc2IDIxLjQxOTcgMTkuOTgxOCAyMS42MzY0TDIxLjcwOTMgMjIuMzk0N0MyMi4wNjcxIDIyLjU1MTggMjIuNDg0OSAyMi40NjU3IDIyLjc1MTcgMjIuMTc5OUMyMy45OTQ0IDIwLjg0OTEgMjQuOTE5OCAxOS4yNTM2IDI1LjQ1ODYgMTcuNTEzQzI1LjU3NDggMTcuMTM3NiAyNS40NDEgMTYuNzI5NiAyNS4xMjUxIDE2LjQ5NjRMMjMuNTk4OCAxNS4zNjk3QzIzLjE2MjggMTUuMDQ4OCAyMi45MDU5IDE0LjU0MDIgMjIuOTA1OSAxMy45OTk0QzIyLjkwNTkgMTMuNDU4NSAyMy4xNjI4IDEyLjk0OTkgMjMuNTk3OCAxMi42Mjk3TDI1LjEyMjggMTEuNTAzNEMyNS40Mzg2IDExLjI3MDIgMjUuNTcyMyAxMC44NjIzIDI1LjQ1NjEgMTAuNDg2OUMyNC45MTcyIDguNzQ2MDUgMjMuOTkxMiA3LjE1MDM0IDIyLjc0NzggNS44MTk4NEMyMi40ODA3IDUuNTMzOTkgMjIuMDYyNiA1LjQ0ODEyIDIxLjcwNDggNS42MDU2MkwxOS45ODQzIDYuMzYyODhDMTkuNzY5IDYuNDU4MzIgMTkuNTM4NSA2LjUwNjk0IDE5LjMwNTUgNi41MDY1N0MxOC40Mzg3IDYuNTA1NjYgMTcuNzExNiA1Ljg1MjE0IDE3LjYxNyA0Ljk4OTMxTDE3LjQwNzkgMy4xMTAxMUMxNy4zNjQzIDIuNzE4MTcgMTcuMDc3IDIuMzk3MjggMTYuNjkyOCAyLjMxMTQzWk0xNCAxOEMxMS43OTA5IDE4IDEwIDE2LjIwOTEgMTAgMTRDMTAgMTEuNzkwOSAxMS43OTA5IDEwIDE0IDEwQzE2LjIwOTEgMTAgMTggMTEuNzkwOSAxOCAxNEMxOCAxNi4yMDkxIDE2LjIwOTEgMTggMTQgMThaIiBmaWxsPSIjZjBmMGYwIi8+Cjwvc3ZnPg=="
+        height="28px" width="28px" style="position: absolute; right: 25px; top: 15px" onclick="dialog(true)">
+    <dialog id="dialog">
+        <h2>Options</h2>
+        <l>Add random, invisible characters (possibility in percentage)</l> <input id="possibility" type="range"
+            step="1" min="0" max="100" value="0"><br>
+        <input type="checkbox" id="characters" checked>
+        <l>Check if a character cannot be displayed in the browser and, if it's not, replace it.</l><br><br>
+        <button onclick="dialog(false)">Close options</button>
+    </dialog>
+    <script src="https://dinoosauro.github.io/Confusify/js/index.js"></script>
+</body>
